@@ -1,0 +1,35 @@
+SELECT 
+    'Total' AS Category,
+    -- For Hosur inventory: Ready, Not Ready, and Total
+    SUM(CASE WHEN ready_stock_on_floor_unpicked = 'Yes' AND recieved_location = 'Hosur' THEN 1 ELSE 0 END) AS Ready,
+    SUM(CASE WHEN at_dtc_and_not_ready = 'Yes' AND recieved_location = 'Hosur' THEN 1 ELSE 0 END) AS Not_Ready,
+    SUM(CASE WHEN (ready_stock_on_floor_unpicked = 'Yes' OR at_dtc_and_not_ready = 'Yes') AND recieved_location = 'Hosur' THEN 1 ELSE 0 END) AS Total
+FROM cleaned_live_data.inventory_dash
+
+UNION
+
+SELECT 
+    'PaaS' AS Category,
+    -- For PaaS within Hosur inventory: Ready, Not Ready, and Total
+    SUM(CASE WHEN ready_stock_on_floor_unpicked = 'Yes' AND recieved_location = 'Hosur' AND paas_mapping = 'PaaS' THEN 1 ELSE 0 END) AS Ready,
+    SUM(CASE WHEN at_dtc_and_not_ready = 'Yes' AND recieved_location = 'Hosur' AND paas_mapping = 'PaaS' THEN 1 ELSE 0 END) AS Not_Ready,
+    SUM(CASE WHEN (ready_stock_on_floor_unpicked = 'Yes' AND paas_mapping = 'PaaS' AND recieved_location = 'Hosur') OR 
+                 (at_dtc_and_not_ready = 'Yes' AND paas_mapping = 'PaaS' AND recieved_location = 'Hosur') THEN 1 ELSE 0 END) AS Total
+FROM cleaned_live_data.inventory_dash
+
+UNION
+
+SELECT 
+    'Retail' AS Category,
+    -- For Retail within Hosur inventory: Ready, Not Ready, and Total
+    (SUM(CASE WHEN ready_stock_on_floor_unpicked = 'Yes' AND recieved_location = 'Hosur' THEN 1 ELSE 0 END) - 
+     SUM(CASE WHEN ready_stock_on_floor_unpicked = 'Yes' AND recieved_location = 'Hosur' AND paas_mapping = 'PaaS' THEN 1 ELSE 0 END)) AS Ready,
+    
+    (SUM(CASE WHEN at_dtc_and_not_ready = 'Yes' AND recieved_location = 'Hosur' THEN 1 ELSE 0 END) - 
+     SUM(CASE WHEN at_dtc_and_not_ready = 'Yes' AND recieved_location = 'Hosur' AND paas_mapping = 'PaaS' THEN 1 ELSE 0 END)) AS Not_Ready,
+    
+    ((SUM(CASE WHEN ready_stock_on_floor_unpicked = 'Yes' AND recieved_location = 'Hosur' THEN 1 ELSE 0 END) - 
+     SUM(CASE WHEN ready_stock_on_floor_unpicked = 'Yes' AND recieved_location = 'Hosur' AND paas_mapping = 'PaaS' THEN 1 ELSE 0 END)) +
+     (SUM(CASE WHEN at_dtc_and_not_ready = 'Yes' AND recieved_location = 'Hosur' THEN 1 ELSE 0 END) - 
+     SUM(CASE WHEN at_dtc_and_not_ready = 'Yes' AND recieved_location = 'Hosur' AND paas_mapping = 'PaaS' THEN 1 ELSE 0 END))) AS Total
+FROM cleaned_live_data.inventory_dash;

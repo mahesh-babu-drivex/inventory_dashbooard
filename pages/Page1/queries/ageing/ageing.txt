@@ -1,0 +1,19 @@
+SELECT
+    ab.bucket_name,
+    COUNT(v.registration_number) AS vehicle_count
+FROM
+    cleaned_live_data.inventory_dash v
+JOIN
+    cleaned_live_data.ageing_bucket ab ON 
+    v.vehicle_ownership_date >= CURRENT_DATE - ab.max_days AND
+    v.vehicle_ownership_date <= CURRENT_DATE - ab.min_days
+GROUP BY
+    ab.bucket_name
+ORDER BY
+    CASE
+        WHEN ab.bucket_name = '<15 days' THEN 1
+        WHEN ab.bucket_name = '16-30 days' THEN 2
+		WHEN ab.bucket_name=  '31-45 days' Then 3
+		WHEN ab.bucket_name ='>45 days' THEN 4
+        ELSE 3 -- Add more cases here if needed
+    END

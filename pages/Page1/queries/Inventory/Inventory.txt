@@ -1,0 +1,14 @@
+SELECT 
+    'Total Inventory' AS "x",
+    COUNT("registration_number") AS "y"
+FROM cleaned_live_data.inventory_dash
+UNION ALL
+SELECT 
+    'PaaS' AS "x",
+    COUNT(CASE WHEN "paas_mapping" = 'PaaS' THEN "registration_number" END) AS "y"
+FROM cleaned_live_data.inventory_dash
+UNION ALL
+SELECT 
+    'Retail' AS "x",
+    COUNT("registration_number") - COUNT(CASE WHEN  "paas_mapping" = 'PaaS' THEN "registration_number" END) AS "y"
+FROM cleaned_live_data.inventory_dash;

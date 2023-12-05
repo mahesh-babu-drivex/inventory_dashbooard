@@ -1,0 +1,11 @@
+SELECT
+  ROUND(AVG(CASE 
+        WHEN regexp_replace("procured_price", '[^0-9]', '', 'g') ~ E'^\\s*$' THEN null 
+        ELSE CAST(regexp_replace("procured_price", '[^0-9]', '', 'g') AS NUMERIC) 
+      END)) AS average_price,
+  ROUND(SUM(CASE 
+        WHEN regexp_replace("procured_price", '[^0-9]', '', 'g') ~ E'^\\s*$' THEN 0 
+        ELSE CAST(regexp_replace("procured_price", '[^0-9]', '', 'g') AS NUMERIC) 
+      END)) AS total_sum
+FROM
+  cleaned_live_data.inventory_dash;

@@ -1,0 +1,5 @@
+SELECT 
+    ROUND(SUM(COALESCE(NULLIF(REGEXP_REPLACE(procured_price, '[^0-9]', '', 'g'), ''), '0')::DECIMAL)) AS rounded_sum_value,
+    ROUND(AVG(NULLIF(NULLIF(REGEXP_REPLACE(procured_price, '[^0-9]', '', 'g'), ''), '')::DECIMAL)) AS rounded_avg_value
+FROM 
+    cleaned_live_data.inventory_dash;
