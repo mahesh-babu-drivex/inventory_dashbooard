@@ -12,7 +12,7 @@
     "parentRowSpace": 10,
     "type": "STATBOX_WIDGET",
     "hideCard": false,
-    "shouldScrollContents": false,
+    "shouldScrollContents": true,
     "mobileRightColumn": 62,
     "animateLoading": true,
     "parentColumnSpace": 16.75,
