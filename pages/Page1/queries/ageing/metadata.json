@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "SELECT\n    ab.bucket_name,\n    COUNT(v.registration_number) AS vehicle_count\nFROM\n    cleaned_live_data.inventory_dash v\nJOIN\n    cleaned_live_data.ageing_bucket ab ON \n    v.vehicle_ownership_date >= CURRENT_DATE - ab.max_days AND\n    v.vehicle_ownership_date <= CURRENT_DATE - ab.min_days\nGROUP BY\n    ab.bucket_name\nORDER BY\n    CASE\n        WHEN ab.bucket_name = '<15 days' THEN 1\n        WHEN ab.bucket_name = '16-30 days' THEN 2\n\t\tWHEN ab.bucket_name=  '31-45 days' Then 3\n\t\tWHEN ab.bucket_name ='>45 days' THEN 4\n        ELSE 3 -- Add more cases here if needed\n    END\n",
+      "body": "SELECT\n\n    ab.bucket_name,\n    COUNT(v.registration_number) AS vehicle_count\nFROM\n    cleaned_live_data.inventory_dash v\nJOIN\n    cleaned_live_data.ageing_bucket ab ON \n    v.vehicle_ownership_date >= CURRENT_DATE - ab.max_days AND\n    v.vehicle_ownership_date <= CURRENT_DATE - ab.min_days\nGROUP BY\n    ab.bucket_name\nORDER BY\n    CASE\n        WHEN ab.bucket_name = '<15 days' THEN 1\n        WHEN ab.bucket_name = '16-30 days' THEN 2\n\t\tWHEN ab.bucket_name=  '31-45 days' Then 3\n\t\tWHEN ab.bucket_name ='>45 days' THEN 4\n        ELSE 3 -- Add more cases here if needed\n    END\n",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
