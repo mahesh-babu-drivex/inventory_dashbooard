@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 940,
+          "bottomRow": 1530,
           "containerStyle": "none",
           "snapRows": 124,
           "parentRowSpace": 1,
@@ -39,6 +39,24 @@
             {
               "id": "Page1_ageing",
               "name": "ageing",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Page1_brand_ratio",
+              "name": "brand_ratio",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Page1_state_mix",
+              "name": "state_mix",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [],

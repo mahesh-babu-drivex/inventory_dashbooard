@@ -1,0 +1,25 @@
+-- select distinct count(*) ka_tn  ,ka_tn from cleaned_live_data.inventory_dash	group by ka_tn 
+
+SELECT 
+    CASE 
+        WHEN count_val >= 105 THEN ka_tn
+        ELSE 'Others'
+    END AS state_name,
+    SUM(count_val) AS count_total
+FROM (
+    SELECT 
+        COUNT(*) AS count_val,
+        CASE 
+            WHEN ka_tn IS NOT NULL AND ka_tn != '--' THEN ka_tn
+            ELSE 'Others'
+        END AS ka_tn
+    FROM 
+        cleaned_live_data.inventory_dash
+    GROUP BY 
+        ka_tn
+) AS subquery
+GROUP BY 
+    CASE 
+        WHEN count_val >= 105 THEN ka_tn
+        ELSE 'Others'
+    END;

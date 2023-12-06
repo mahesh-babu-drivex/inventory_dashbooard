@@ -1,0 +1,23 @@
+SELECT 
+    CASE 
+        WHEN count_val >= 242 THEN brand
+        ELSE 'Others'
+    END AS brand_name,
+    SUM(count_val) AS count_total
+FROM (
+    SELECT 
+        COUNT(*) AS count_val,
+        CASE 
+            WHEN brand IS NOT NULL AND brand != '#N/A' THEN brand
+            ELSE 'Others'
+        END AS brand
+    FROM 
+        cleaned_live_data.inventory_dash
+    GROUP BY 
+        brand
+) AS subquery
+GROUP BY 
+    CASE 
+        WHEN count_val >= 242 THEN brand
+        ELSE 'Others'
+    END;
