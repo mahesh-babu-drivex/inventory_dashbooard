@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "postgres-plugin",
   "unpublishedAction": {
-    "name": "Average_age",
+    "name": "avg_age_coco",
     "datasource": {
       "name": "Postgres",
       "pluginId": "postgres-plugin",
@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "select \n\tAVG(current_date - vehicle_ownership_date) as avg_age\nfrom\n\tcleaned_live_data.inventory_dash\n\t\n",
+      "body": "SELECT AVG(current_date - vehicle_ownership_date) AS avg_age\nFROM cleaned_live_data.inventory_dash\nWHERE coco_mapping IN ('COCO APR', 'COCO CHEN', 'COCO ARUP', 'COCO CBE', 'COCO Bang');\n",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -36,9 +36,9 @@
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": [],
-    "createdAt": "2023-11-27T12:19:21Z"
+    "createdAt": "2023-12-07T06:52:51Z"
   },
-  "id": "Page1_Average_age",
+  "id": "Page1_avg_age_coco",
   "deleted": false,
-  "gitSyncId": "655ca32f80e26167c30e1879_6564894980e26167c30e198f"
+  "gitSyncId": "655ca32f80e26167c30e1879_65716bc380e26167c30e1cce"
 }

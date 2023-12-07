@@ -8,8 +8,8 @@
         "paragraph",
         "label"
     ],
-    "topRow": 89,
-    "bottomRow": 94,
+    "topRow": 82,
+    "bottomRow": 87,
     "parentRowSpace": 10,
     "type": "TEXT_WIDGET",
     "hideCard": false,
@@ -19,7 +19,7 @@
     "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
     "parentColumnSpace": 20.078125,
     "dynamicTriggerPathList": [],
-    "leftColumn": 25,
+    "leftColumn": 30,
     "dynamicBindingPathList": [
         {"key": "truncateButtonColor"},
         {"key": "fontFamily"},
@@ -30,7 +30,7 @@
     "text": "# Denotes the interest cost accrued on holding the inventory at 10% p.a.",
     "key": "nh7qvequyg",
     "isDeprecated": false,
-    "rightColumn": 41,
+    "rightColumn": 46,
     "textAlign": "CENTER",
     "dynamicHeight": "AUTO_HEIGHT",
     "widgetId": "hihh56snbv",
@@ -48,11 +48,11 @@
     "isLoading": false,
     "mobileTopRow": 72,
     "responsiveBehavior": "fill",
-    "originalTopRow": 89,
+    "originalTopRow": 82,
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
     "mobileLeftColumn": 45,
     "maxDynamicHeight": 9000,
-    "originalBottomRow": 94,
+    "originalBottomRow": 87,
     "fontSize": "0.875rem",
     "minDynamicHeight": 4
 }

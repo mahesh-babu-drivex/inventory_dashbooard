@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "postgres-plugin",
   "unpublishedAction": {
-    "name": "Average_age",
+    "name": "Query2",
     "datasource": {
       "name": "Postgres",
       "pluginId": "postgres-plugin",
@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "select \n\tAVG(current_date - vehicle_ownership_date) as avg_age\nfrom\n\tcleaned_live_data.inventory_dash\n\t\n",
+      "body": "select \n\tAVG(current_date - vehicle_ownership_date) as avg_age\nfrom\n\tcleaned_live_data.inventory_dash\nwhere paas_mapping='PaaS'\n",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -26,7 +26,7 @@
         }
       ]
     },
-    "executeOnLoad": true,
+    "executeOnLoad": false,
     "dynamicBindingPathList": [],
     "isValid": true,
     "invalids": [],
@@ -35,10 +35,9 @@
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
-    "userPermissions": [],
-    "createdAt": "2023-11-27T12:19:21Z"
+    "userPermissions": []
   },
-  "id": "Page1_Average_age",
+  "id": "Page1_Query2",
   "deleted": false,
-  "gitSyncId": "655ca32f80e26167c30e1879_6564894980e26167c30e198f"
+  "gitSyncId": "655ca32f80e26167c30e1879_657168d180e26167c30e1ccb"
 }

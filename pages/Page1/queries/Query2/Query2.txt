@@ -2,4 +2,4 @@ select
 	AVG(current_date - vehicle_ownership_date) as avg_age
 from
 	cleaned_live_data.inventory_dash
-	
+where paas_mapping='PaaS'

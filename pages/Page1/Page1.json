@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 1530,
+          "bottomRow": 1090,
           "containerStyle": "none",
           "snapRows": 124,
           "parentRowSpace": 1,
@@ -85,6 +85,22 @@
             {
               "id": "Page1_Average_age",
               "name": "Average_age",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Page1_avg_age_coco",
+              "name": "avg_age_coco",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Page1_avg_age_paas",
+              "name": "avg_age_paas",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [],

@@ -2,24 +2,24 @@
     "boxShadow": "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
     "setAdaptiveYMin": false,
     "mobileBottomRow": 88,
-    "widgetName": "Chart1Copy",
+    "widgetName": "Chart1",
     "allowScroll": false,
     "iconSVG": "/static/media/icon.8eea39845729f7f4bfadeecd3810a09d.svg",
     "displayName": "Chart",
-    "topRow": 111,
+    "topRow": 21,
     "searchTags": [
         "graph",
         "visuals",
         "visualisations"
     ],
-    "bottomRow": 153,
+    "bottomRow": 53,
     "parentRowSpace": 10,
     "type": "CHART_WIDGET",
     "hideCard": false,
     "mobileRightColumn": 11,
     "chartData": {"cpd7kt1f0j": {
-        "data": "{{state_mix.data.map( p => ({x: p.state_name, y: p.count_total}))}}\n\n",
-        "seriesName": ""
+        "data": "{{brand_ratio.data.map( p => ({x: p.brand_name, y: p.count_total}))}}\n\n",
+        "seriesName": " "
     }},
     "animateLoading": true,
     "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
@@ -32,7 +32,7 @@
         {"key": "fontFamily"},
         {"key": "chartData.cpd7kt1f0j.data"}
     ],
-    "leftColumn": 37,
+    "leftColumn": 0,
     "customFusionChartConfig": {
         "type": "column2d",
         "dataSource": {
@@ -85,13 +85,13 @@
     "showDataPointLabel": true,
     "key": "kqfl5qkrkz",
     "isDeprecated": false,
-    "rightColumn": 64,
+    "rightColumn": 63,
     "accentColor": "{{appsmith.theme.colors.primaryColor}}",
-    "widgetId": "8swsvk6tl0",
+    "widgetId": "wj7m7tbvlz",
     "minWidth": 450,
     "isVisible": true,
     "version": 1,
-    "parentId": "0",
+    "parentId": "84xb82a309",
     "tags": ["Display"],
     "labelOrientation": "auto",
     "isLoading": false,
@@ -99,11 +99,11 @@
     "mobileTopRow": 56,
     "responsiveBehavior": "fill",
     "yAxisName": "Revenue($)",
-    "originalTopRow": 111,
-    "chartName": "State",
+    "originalTopRow": 98,
+    "chartName": "Brand",
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
     "mobileLeftColumn": 0,
     "xAxisName": "Product Line",
-    "originalBottomRow": 153,
+    "originalBottomRow": 130,
     "chartType": "PIE_CHART"
 }
