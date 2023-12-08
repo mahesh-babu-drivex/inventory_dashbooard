@@ -1,0 +1,31 @@
+
+SELECT 
+    state_group AS state,
+    COUNT(CASE WHEN brand_group = 'Bajaj' THEN 1 END) AS Bajaj,
+    COUNT(CASE WHEN brand_group = 'HERO' THEN 1 END) AS HERO,
+    COUNT(CASE WHEN brand_group = 'Royal Enfield' THEN 1 END) AS "Royal Enfield",
+    COUNT(CASE WHEN brand_group = 'TVS' THEN 1 END) AS TVS,
+    COUNT(CASE WHEN brand_group = 'Honda' THEN 1 END) AS Honda,
+    COUNT(CASE WHEN brand_group = 'Yamaha' THEN 1 END) AS Yamaha,
+    COUNT(CASE WHEN brand_group = 'Others' THEN 1 END) AS Others
+FROM (
+    SELECT 
+        CASE 
+            WHEN ka_tn IN ('TN', 'KA', 'KL', 'BR') THEN ka_tn 
+            ELSE 'Others' 
+        END AS state_group,
+        CASE 
+            WHEN brand IN ('Bajaj', 'HERO', 'Royal Enfield', 'TVS', 'Honda', 'Yamaha') THEN brand 
+            ELSE 'Others' 
+        END AS brand_group
+    FROM 
+        cleaned_live_data.inventory_dash
+    WHERE 
+        brand IS NOT NULL 
+        AND brand != '#N/A' 
+        AND ka_tn != '--'
+) AS subquery
+GROUP BY 
+    state_group
+ORDER BY 
+    state_group;

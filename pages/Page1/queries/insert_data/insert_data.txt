@@ -1,0 +1,20 @@
+INSERT INTO cleaned_live_data.inventory_snapshot (
+    total_inventory, paas, retail, bajaj, tvs, hero, honda, yamaha, other_brands,
+    br, ka, kl, tn, up, other_states, avg_procurement_price, total_procurement_price,
+    avg_inventory_holding_cost, total_inventory_holding_cost, avg_age_inventory,
+    avg_age_paas, avg_age_coco, avg_age_fofo, fifteen_days, sixteen_30_days,
+    thirtyone_45_days, fourtyfive_days, snapshot_date
+)
+VALUES ({{Inventory.data[0].y}},{{Inventory.data[1].y}},{{Inventory.data[2].y}},{{brand_ratio.data[0].count_total}},{{brand_ratio.data[4].count_total}},{{brand_ratio.data[1].count_total}},{{brand_ratio.data[2].count_total}},{{brand_ratio.data[5].count_total}},{{brand_ratio.data[3].count_total}},
+{{state_mix.data[0].count_total}},{{state_mix.data[1].count_total}},
+{{state_mix.data[2].count_total}},{{state_mix.data[4].count_total}},
+{{state_mix.data[5].count_total}},{{state_mix.data[3].count_total}},
+{{Purchasing_avg_price.data[0].rounded_avg_value}},{{Purchasing_avg_price.data[0].rounded_sum_value}},
+{{inventory_holding_cost.data[0].average_inventory_holding_cost}},{{inventory_holding_cost.data[0].total_inventory_holding_cost}},
+{{Average_age.data[0].avg_age}},{{avg_age_paas.data[0].avg_age}},
+{{avg_age_coco.data[0].avg_age}},{{Number(0)}},{{ageing.data[0].vehicle_count}},
+{{ageing.data[1].vehicle_count}},{{ageing.data[2].vehicle_count}},{{ageing.data[3].vehicle_count}},
+CURRENT_DATE
+
+   
+);

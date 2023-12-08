@@ -1,0 +1,20 @@
+{
+  "unpublishedCollection": {
+    "name": "JSObject2",
+    "pageId": "Page1",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [
+      {
+        "name": "options",
+        "value": "{\n  tooltip: {\n    trigger: 'axis',\n    axisPointer: {\n      type: 'shadow'\n    }\n  },\n  legend: {},\n  grid: {\n    left: '4%',\n    right: '15%',\n    bottom: '15%',\n    containLabel: true\n  },\n  xAxis: {\n    type: 'value',\n    name: 'Vehicle Count',\n    nameLocation: 'middle',\n    nameGap: 30\n  },\n  yAxis: {\n    type: 'category',\n    data: ['BR', 'KA', 'KL', 'Others', 'TN'],\n    name: 'State',\n    nameLocation: 'middle',\n    nameGap: 30\n  },\n  series: [{\n    name: 'Bajaj',\n    type: 'bar',\n    stack: 'total',\n    label: {\n      show: false,\n      position: 'inside',\n      rotate: 50\n    },\n    emphasis: {\n      focus: 'series'\n    },\n    data: JSObject2.fetchData().bajaj,\n    sort: 'descending'\n  }, {\n    name: 'Hero',\n    type: 'bar',\n    stack: 'total',\n    label: {\n      show: false,\n      position: 'inside',\n      rotate: 50\n    },\n    emphasis: {\n      focus: 'series'\n    },\n    data: JSObject2.fetchData().hero\n  }, {\n    name: 'Royal Enfield',\n    type: 'bar',\n    stack: 'total',\n    label: {\n      show: false,\n      position: 'inside',\n      rotate: 50\n    },\n    emphasis: {\n      focus: 'series'\n    },\n    data: JSObject2.fetchData()['Royal Enfield']\n  }, {\n    name: 'tvs',\n    type: 'bar',\n    stack: 'total',\n    label: {\n      show: false,\n      position: 'inside',\n      rotate: 50\n    },\n    emphasis: {\n      focus: 'series'\n    },\n    data: JSObject2.fetchData().tvs\n  }, {\n    name: 'Honda',\n    type: 'bar',\n    stack: 'total',\n    label: {\n      show: false,\n      position: 'inside',\n      rotate: 50\n    },\n    emphasis: {\n      focus: 'series'\n    },\n    data: JSObject2.fetchData().honda\n  }, {\n    name: 'Yamaha',\n    type: 'bar',\n    stack: 'total',\n    label: {\n      show: false,\n      position: 'inside',\n      rotate: 50\n    },\n    emphasis: {\n      focus: 'series'\n    },\n    data: JSObject2.fetchData().yamaha\n  }, {\n    name: 'Others',\n    type: 'bar',\n    stack: 'total',\n    label: {\n      show: false,\n      position: 'inside',\n      rotate: 50\n    },\n    emphasis: {\n      focus: 'series'\n    },\n    data: JSObject2.fetchData().others\n  }]\n}"
+      }
+    ],
+    "userPermissions": []
+  },
+  "id": "Page1_JSObject2",
+  "deleted": false,
+  "gitSyncId": "655ca32f80e26167c30e1879_657206bf99a01a4f1cd5170f"
+}

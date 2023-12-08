@@ -1,0 +1,74 @@
+{
+    "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+    "mobileBottomRow": 165,
+    "widgetName": "Chart2",
+    "allowScroll": false,
+    "displayName": "Chart",
+    "iconSVG": "/static/media/icon.8eea39845729f7f4bfadeecd3810a09d.svg",
+    "searchTags": [
+        "graph",
+        "visuals",
+        "visualisations"
+    ],
+    "topRow": 22,
+    "bottomRow": 64,
+    "parentRowSpace": 10,
+    "type": "CHART_WIDGET",
+    "hideCard": false,
+    "mobileRightColumn": 29,
+    "chartData": {"i25nkf282a": {
+        "data": [
+            {
+                "x": "Product1",
+                "y": 20000
+            },
+            {
+                "x": "Product2",
+                "y": 22000
+            },
+            {
+                "x": "Product3",
+                "y": 32000
+            }
+        ],
+        "seriesName": "2023"
+    }},
+    "animateLoading": true,
+    "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+    "parentColumnSpace": 16.75,
+    "dynamicTriggerPathList": [],
+    "dynamicBindingPathList": [
+        {"key": "boxShadow"},
+        {"key": "accentColor"},
+        {"key": "fontFamily"},
+        {"key": "customEChartConfig"}
+    ],
+    "leftColumn": 1,
+    "customFusionChartConfig": "{\n  \"type\": \"mscolumn2dh\",\n  \"dataSource\": {\n    \"data\": [\n      {\n        \"label\": \"Product1\",\n        \"value\": 20000\n      },\n      {\n        \"label\": \"Product2\",\n        \"value\": 22000\n      },\n      {\n        \"label\": \"Product3\",\n        \"value\": 32000\n      }\n    ],\n    \"chart\": {\n      \"caption\": \"Sales Report\",\n      \"xAxisName\": \"Product Line\",\n      \"yAxisName\": \"Revenue($)\",\n      \"theme\": \"fusion\",\n      \"alignCaptionWithCanvas\": 1,\n      \"captionFontSize\": \"24\",\n      \"captionAlignment\": \"center\",\n      \"captionPadding\": \"20\",\n      \"captionFontColor\": \"#231F20\",\n      \"legendIconSides\": \"4\",\n      \"legendIconBgAlpha\": \"100\",\n      \"legendIconAlpha\": \"100\",\n      \"legendPosition\": \"top\",\n      \"canvasPadding\": \"0\",\n      \"chartLeftMargin\": \"20\",\n      \"chartTopMargin\": \"10\",\n      \"chartRightMargin\": \"40\",\n      \"chartBottomMargin\": \"10\",\n      \"xAxisNameFontSize\": \"14\",\n      \"labelFontSize\": \"12\",\n      \"labelFontColor\": \"#716e6e\",\n      \"xAxisNameFontColor\": \"#716e6e\",\n      \"yAxisNameFontSize\": \"14\",\n      \"yAxisValueFontSize\": \"12\",\n      \"yAxisValueFontColor\": \"#716e6e\",\n      \"yAxisNameFontColor\": \"#716e6e\"\n    }\n  }\n}",
+    "customEChartConfig": "{{JSObject2.options}}",
+    "flexVerticalAlignment": "start",
+    "showDataPointLabel": false,
+    "key": "e3vylrp2tw",
+    "isDeprecated": false,
+    "rightColumn": 64,
+    "widgetId": "qba7ctaf8c",
+    "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+    "minWidth": 450,
+    "isVisible": true,
+    "version": 1,
+    "parentId": "84xb82a309",
+    "labelOrientation": "auto",
+    "tags": ["Display"],
+    "renderMode": "CANVAS",
+    "isLoading": false,
+    "mobileTopRow": 133,
+    "responsiveBehavior": "fill",
+    "yAxisName": "Revenue($)",
+    "originalTopRow": 124,
+    "chartName": "Sales Report",
+    "borderRadius": "0px",
+    "mobileLeftColumn": 5,
+    "xAxisName": "Product Line",
+    "originalBottomRow": 162,
+    "chartType": "CUSTOM_ECHART"
+}
