@@ -1,5 +1,5 @@
 SELECT 
-    ROUND(SUM(0.008 * (current_date - vehicle_ownership_date) / 30 * COALESCE(NULLIF(REGEXP_REPLACE(procured_price, '[^0-9]', '', 'g'), ''), '0')::DECIMAL), 0) AS total_inventory_holding_cost,
-    ROUND(AVG(0.008 * (current_date - vehicle_ownership_date) / 30 * NULLIF(NULLIF(REGEXP_REPLACE(procured_price, '[^0-9]', '', 'g'), ''), '')::DECIMAL), 0) AS average_inventory_holding_cost
+    ROUND(SUM(0.008333 * (current_date - vehicle_ownership_date)/30  * COALESCE(NULLIF(REGEXP_REPLACE(procured_price, '[^0-9]', '', 'g'), ''), '0')::DECIMAL), 0) AS total_inventory_holding_cost,
+    ROUND(AVG(0.008333 * (current_date - vehicle_ownership_date) / 30 * NULLIF(NULLIF(REGEXP_REPLACE(procured_price, '[^0-9]', '', 'g'), ''), '')::DECIMAL), 0) AS average_inventory_holding_cost
 FROM 
     cleaned_live_data.inventory_dash;

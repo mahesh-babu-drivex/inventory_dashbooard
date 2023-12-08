@@ -20,4 +20,5 @@ GROUP BY
     CASE 
         WHEN count_val >= 242 THEN brand
         ELSE 'Others'
-    END;
+    END
+order  by count_total desc

@@ -22,4 +22,5 @@ GROUP BY
     CASE 
         WHEN count_val >= 105 THEN ka_tn
         ELSE 'Others'
-    END;
+    END
+order by count_total desc

@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "-- select distinct count(*) ka_tn  ,ka_tn from cleaned_live_data.inventory_dash\tgroup by ka_tn \n\nSELECT \n    CASE \n        WHEN count_val >= 105 THEN ka_tn\n        ELSE 'Others'\n    END AS state_name,\n    SUM(count_val) AS count_total\nFROM (\n    SELECT \n        COUNT(*) AS count_val,\n        CASE \n            WHEN ka_tn IS NOT NULL AND ka_tn != '--' THEN ka_tn\n            ELSE 'Others'\n        END AS ka_tn\n    FROM \n        cleaned_live_data.inventory_dash\n    GROUP BY \n        ka_tn\n) AS subquery\nGROUP BY \n    CASE \n        WHEN count_val >= 105 THEN ka_tn\n        ELSE 'Others'\n    END;",
+      "body": "-- select distinct count(*) ka_tn  ,ka_tn from cleaned_live_data.inventory_dash\tgroup by ka_tn \n\nSELECT \n    CASE \n        WHEN count_val >= 105 THEN ka_tn\n        ELSE 'Others'\n    END AS state_name,\n    SUM(count_val) AS count_total\nFROM (\n    SELECT \n        COUNT(*) AS count_val,\n        CASE \n            WHEN ka_tn IS NOT NULL AND ka_tn != '--' THEN ka_tn\n            ELSE 'Others'\n        END AS ka_tn\n    FROM \n        cleaned_live_data.inventory_dash\n    GROUP BY \n        ka_tn\n) AS subquery\nGROUP BY \n    CASE \n        WHEN count_val >= 105 THEN ka_tn\n        ELSE 'Others'\n    END\norder by count_total desc",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {

@@ -70,7 +70,7 @@
     "compactMode": "DEFAULT",
     "displayName": "Table",
     "bottomRow": 21,
-    "columnWidthMap": {"x": 376},
+    "columnWidthMap": {"x": 355},
     "parentRowSpace": 10,
     "hideCard": false,
     "mobileRightColumn": 27,

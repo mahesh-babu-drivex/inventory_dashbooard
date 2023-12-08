@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "SELECT \n    CASE \n        WHEN count_val >= 242 THEN brand\n        ELSE 'Others'\n    END AS brand_name,\n    SUM(count_val) AS count_total\nFROM (\n    SELECT \n        COUNT(*) AS count_val,\n        CASE \n            WHEN brand IS NOT NULL AND brand != '#N/A' THEN brand\n            ELSE 'Others'\n        END AS brand\n    FROM \n        cleaned_live_data.inventory_dash\n    GROUP BY \n        brand\n) AS subquery\nGROUP BY \n    CASE \n        WHEN count_val >= 242 THEN brand\n        ELSE 'Others'\n    END;",
+      "body": "SELECT \n    CASE \n        WHEN count_val >= 242 THEN brand\n        ELSE 'Others'\n    END AS brand_name,\n    SUM(count_val) AS count_total\nFROM (\n    SELECT \n        COUNT(*) AS count_val,\n        CASE \n            WHEN brand IS NOT NULL AND brand != '#N/A' THEN brand\n            ELSE 'Others'\n        END AS brand\n    FROM \n        cleaned_live_data.inventory_dash\n    GROUP BY \n        brand\n) AS subquery\nGROUP BY \n    CASE \n        WHEN count_val >= 242 THEN brand\n        ELSE 'Others'\n    END\norder  by count_total desc",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
