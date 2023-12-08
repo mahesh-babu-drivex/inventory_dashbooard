@@ -26,7 +26,7 @@
     ],
     "shouldTruncate": false,
     "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
-    "text": "{{ + ' days'}}",
+    "text": "{{avg_age_fofo.data[0].avg_age.toFixed(0) + ' days'}}",
     "key": "9xf4wohlcl",
     "isDeprecated": false,
     "rightColumn": 37,
