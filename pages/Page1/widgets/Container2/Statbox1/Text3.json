@@ -26,7 +26,7 @@
     ],
     "shouldTruncate": false,
     "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
-    "text": "{{Purchasing_avg_price.data[0].rounded_avg_value+' INR'}}\n",
+    "text": "{{Purchasing_avg_price.data[0].rounded_avg_value}}\n",
     "key": "9xf4wohlcl",
     "isDeprecated": false,
     "rightColumn": 63,

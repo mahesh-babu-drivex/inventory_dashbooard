@@ -18,6 +18,7 @@
     "mobileRightColumn": 25,
     "chartData": {"3do2xuubww": {
         "data": "{{brand_ratio.data.map( p => ({x: p.brand_name, y: p.count_total}))}}\n\n",
+        "color": "#e15615",
         "seriesName": ""
     }},
     "animateLoading": true,

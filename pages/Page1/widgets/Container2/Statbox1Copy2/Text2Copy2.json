@@ -28,7 +28,7 @@
     "key": "9xf4wohlcl",
     "isDeprecated": false,
     "rightColumn": 64,
-    "textAlign": "LEFT",
+    "textAlign": "CENTER",
     "dynamicHeight": "AUTO_HEIGHT",
     "widgetId": "5ar3y7fldx",
     "minWidth": 450,
@@ -49,7 +49,7 @@
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
     "mobileLeftColumn": 1,
     "maxDynamicHeight": 9000,
-    "originalBottomRow": 8,
+    "originalBottomRow": 6,
     "fontSize": "1.25rem",
     "minDynamicHeight": 4
 }

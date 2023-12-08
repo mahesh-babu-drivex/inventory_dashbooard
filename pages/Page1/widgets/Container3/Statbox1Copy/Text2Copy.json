@@ -24,10 +24,10 @@
     ],
     "shouldTruncate": false,
     "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
-    "text": "Average Age of Inventory",
+    "text": "Average Age of current Inventory",
     "key": "9xf4wohlcl",
     "isDeprecated": false,
-    "rightColumn": 36,
+    "rightColumn": 40,
     "textAlign": "LEFT",
     "dynamicHeight": "AUTO_HEIGHT",
     "widgetId": "avco8g54lv",
@@ -49,7 +49,7 @@
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
     "mobileLeftColumn": 1,
     "maxDynamicHeight": 9000,
-    "originalBottomRow": 8,
+    "originalBottomRow": 11,
     "fontSize": "1.25rem",
     "minDynamicHeight": 4
 }

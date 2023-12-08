@@ -9,7 +9,7 @@
         "label"
     ],
     "topRow": 0,
-    "bottomRow": 8,
+    "bottomRow": 6,
     "type": "TEXT_WIDGET",
     "hideCard": false,
     "mobileRightColumn": 37,
@@ -27,7 +27,7 @@
     "text": "Average Age of FOFO",
     "key": "9xf4wohlcl",
     "isDeprecated": false,
-    "rightColumn": 36,
+    "rightColumn": 42,
     "textAlign": "LEFT",
     "dynamicHeight": "AUTO_HEIGHT",
     "widgetId": "k5z43hcwh8",
