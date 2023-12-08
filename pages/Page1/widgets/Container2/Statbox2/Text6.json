@@ -29,8 +29,8 @@
     "text": "{{(Purchasing_avg_price.data[0].rounded_sum_value/10000000).toFixed(2) +' cr'}}",
     "key": "9xf4wohlcl",
     "isDeprecated": false,
-    "rightColumn": 37,
-    "textAlign": "LEFT",
+    "rightColumn": 62,
+    "textAlign": "CENTER",
     "dynamicHeight": "AUTO_HEIGHT",
     "widgetId": "7sxgoov7fu",
     "minWidth": 450,
@@ -51,7 +51,7 @@
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
     "mobileLeftColumn": 1,
     "maxDynamicHeight": 9000,
-    "originalBottomRow": 13,
+    "originalBottomRow": 17,
     "fontSize": "2rem",
     "minDynamicHeight": 4
 }
